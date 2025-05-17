@@ -44,12 +44,12 @@ const EditPost = () => {
       setTitle(data.title);
       setContent(data.content);
       try {
-  const parsedTags =
-    typeof data.tags === 'string' ? JSON.parse(data.tags) : data.tags;
-  setTags(Array.isArray(parsedTags) ? parsedTags.join(', ') : '');
-} catch {
-  setTags('');
-}
+      const parsedTags =
+      typeof data.tags === 'string' ? JSON.parse(data.tags) : data.tags;
+        setTags(Array.isArray(parsedTags) ? parsedTags.join(', ') : '');
+      } catch {
+        setTags('');
+      }
 
       setStatus(data.status);
       setLoading(false);

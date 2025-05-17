@@ -68,12 +68,12 @@ const NewPost = () => {
       error: sessionError,
     } = await supabase.auth.getSession();
 
-    // if (sessionError) {
-    //   toast.error('You are not authenticated. Please log in.');
-    //   setSaving(false);
-    //   navigate('/login');
-    //   return;
-    // }
+    if (sessionError) {
+      toast.error('You are not authenticated. Please log in.');
+      setSaving(false);
+      navigate('/login');
+      return;
+    }
 
     const userId = session.user.id;
     const payload = {
@@ -127,12 +127,12 @@ const NewPost = () => {
       error: sessionError,
     } = await supabase.auth.getSession();
 
-    // if (!session || sessionError) {
-    //   toast.error('You are not authenticated. Please log in.');
-    //   setSaving(false);
-    //   navigate('/login');
-    //   return;
-    // }
+    if (!session || sessionError) {
+      toast.error('You are not authenticated. Please log in.');
+      setSaving(false);
+      navigate('/login');
+      return;
+    }
 
     const userId = session.user.id;
     const payload = {

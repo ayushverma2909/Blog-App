@@ -77,7 +77,12 @@ const MyPosts = () => {
 
       const token = session.access_token;
 
-      await axios.delete(`http://localhost:4000/api/blogs/${postId}`, {
+      const API_BASE_URL =
+        import.meta.env.MODE === "development"
+          ? "http://localhost:4000"
+          : import.meta.env.VITE_API_BASE_URL;
+
+      await axios.delete(`${API_BASE_URL}/api/blogs/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
