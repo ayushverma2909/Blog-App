@@ -11,7 +11,13 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY
 const app = express();
 const port = 4000;
 
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://ayushverma2909.github.io",
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

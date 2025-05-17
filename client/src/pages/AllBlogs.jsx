@@ -7,10 +7,8 @@ const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
- const API_BASE_URL = 
-  import.meta.env.MODE === 'development' 
-    ? 'http://localhost:4000' 
-    : 'https://blog-app-ashy.vercel.app/';
+ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 
   useEffect(() => {
