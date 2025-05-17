@@ -14,7 +14,7 @@ const AllBlogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get(`https://blog-app-ashy.vercel.app/api/blogs/`);
+        const res = await axios.get(`blog-c4gucanj1-ayush-vermas-projects-9047d256.vercel.app`);
         setBlogs(res.data);
       } catch (err) {
         console.error("Failed to fetch blogs", err);
