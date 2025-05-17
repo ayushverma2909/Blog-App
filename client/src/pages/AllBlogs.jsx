@@ -7,14 +7,15 @@ const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
- const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
-
+  const API_BASE_URL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:4000"
+    : import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get(`blog-c4gucanj1-ayush-vermas-projects-9047d256.vercel.app`);
+        const res = await axios.get(`${API_BASE_URL}/api/blogs/`);
         setBlogs(res.data);
       } catch (err) {
         console.error("Failed to fetch blogs", err);
