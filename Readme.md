@@ -34,6 +34,38 @@ A full-stack blog editor application with **auto-save draft**, **publish**, and 
 - 🔔 Toast notification on auto-save (Bonus)
 
 ---
+### 🛠 How to Install & Run Locally
 
-## 🧱 Folder Structure
+# 1. Clone the repository
+git clone https://github.com/ayushverma2909/Blog-App.git
+cd Blog-App
+
+# 2. Install dependencies for both client and server
+cd server
+npm install
+
+cd ../client
+npm install
+
+# Run the backend
+cd server
+npm run dev
+
+# In a separate terminal, run the frontend
+cd ../client
+npm run dev
+
+### 🛠 Supabase installation
+
+
+1. Create an account at [https://www.supabase.com](https://www.supabase.com).
+2. Create a new project and set up a database.
+3. Go to the **SQL Editor** and run the SQL commands provided in the `schemas.sql` file.
+4. Copy your `SUPABASE_URL` and `SUPABASE_ANON_KEY` from the Supabase **Project Settings → API** section.
+5. Paste them into the `.env.example` files in both the `client/` and `server/` folders.
+6. Rename `.env.example` files to `.env`.
+
+✅ That's it — you're now all set! 😄 Enjoy!
+
+
 
