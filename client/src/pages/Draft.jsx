@@ -87,7 +87,7 @@ const Drafts = () => {
         ? "http://localhost:4000"
         : import.meta.env.VITE_API_BASE_URL;
 
-    await axios.delete(`https://ayushverma2909.github.io/Blog-App/api/blogs/${postId}`, {
+    await axios.delete(`${API_BASE_URL}/api/blogs/${postId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -23,6 +23,7 @@ const AllBlogs = () => {
         setLoading(false);
       }
     };
+    
 
     fetchBlogs();
   }, []);
@@ -37,7 +38,6 @@ const AllBlogs = () => {
     };
     return new Date(dateStr).toLocaleString(undefined, options);
   };
-
   return (
     <>
       <div className={styles.navigationLinks}>
