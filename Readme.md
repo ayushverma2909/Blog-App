@@ -1,5 +1,8 @@
 # 📝 Full Stack Blog Editor 
 
+
+[🔗 Project Demo](https://ayushverma2909.github.io/Blog-App/)
+
 A full-stack blog editor application with **auto-save draft**, **publish**, and **edit** features. Built to demonstrate frontend, backend, and database integration skills.
 
 ---
@@ -50,7 +53,7 @@ npm install
 
 # Run the backend
 cd server
-npm run dev
+nodemon index.js
 
 # In a separate terminal, run the frontend
 cd ../client
