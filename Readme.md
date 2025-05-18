@@ -37,6 +37,7 @@ A full-stack blog editor application with **auto-save draft**, **publish**, and 
 ### 🛠 How to Install & Run Locally
 
 # 1. Clone the repository
+```bash
 git clone https://github.com/ayushverma2909/Blog-App.git
 cd Blog-App
 
@@ -54,6 +55,8 @@ npm run dev
 # In a separate terminal, run the frontend
 cd ../client
 npm run dev
+
+```
 
 ### 🛠 Supabase installation
 
