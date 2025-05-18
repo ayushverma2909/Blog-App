@@ -12,8 +12,10 @@ const app = express();
 const port = 4000;
 
 app.use(cors({
-  
+  origin: ['http://localhost:5173', 'https://ayushverma.github.io'],
+  credentials: true
 }));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
